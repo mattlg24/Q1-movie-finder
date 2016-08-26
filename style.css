@@ -1,15 +1,13 @@
 h1 {
-  text-align: center;
+    text-align: center;
 }
-
 .background {
-  background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 500px;
+    background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
 }
-
 main p {
-  text-align: center;
+    text-align: center;
 }
