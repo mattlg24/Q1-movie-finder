@@ -21,13 +21,32 @@ $(document).ready(function() {
                 for (var i = 0; i < allMovies.length; i++) {
                     let movieList = allMovies[i]
                     let movieIds = (movieList.id);
+                    // console.log(movieIds)
+                    $.ajax({
+                        method: "GET",
+                        url: `https://api-public.guidebox.com/v1.43/US/rKdlIiwGSvS2KHovOWT8IdWJseMGPYiH/movie/${movieIds}`,
+                        dataType: 'json',
+                        success: function(newData) {
+                            console.log(newData);
+                            let moviePoster = newData.poster_240x342
+                                // console.log(moviePoster);
+                            $('img').attr({
+                                src: moviePoster
+                            })
+                            let purchaseSources = (newData.purchase_web_sources);
+                            // console.log(purchaseSources);
+                            for (var i = 0; i < purchaseSources.length; i++) {
+                                // console.log(purchaseSources[i])
+                            }
+                        },
+                        error: function(err) {
+                            console.log('newData ERROR msg:', err);
+                        }
+                    })
                 }
-
-                let movieResults = (data.results[0]);
-                let movieId = (movieResults.id);
-                // console.log(movieId);
-                // let movieId = data.id
-                // console.log(movieId);
+            },
+            error: function(err) {
+                console.log('ERROR msg:', err);
             }
         })
     })
