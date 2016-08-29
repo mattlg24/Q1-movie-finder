@@ -56,17 +56,28 @@ $(document).ready(function() {
 
                             // movie trailer
                             let trailer = newData.trailers.web[0].embed
-                            console.log(trailer);
                             let iframe = $('<iframe>')
                             $('<iframe>', {
                                 src: trailer,
                             }).appendTo(movieDiv)
 
-                            // let purchaseSources = (newData.purchase_web_sources);
-                            // // console.log(purchaseSources);
-                            // for (var i = 0; i < purchaseSources.length; i++) {
-                            // console.log(purchaseSources[i])
-                            // }
+
+                            // watch sources
+                            let sourceLinks;
+                            let purchaseSources = (newData.purchase_web_sources);
+                            // loops thru all watch sources
+                            for (var i = 0; i < purchaseSources.length; i++) {
+                                let sources = purchaseSources[i]
+                                    // console.log(newData.title);
+                                sourceLinks = (sources.link);
+                                // console.log(sourceLinks);
+                                // appends links to page
+                                $('<a>', {
+                                    href: sourceLinks,
+                                    text: 'Watch Here'
+                                }).appendTo(movieDiv)
+                            }
+
                         },
                         error: function(err) {
                             console.log('newData ERROR msg:', err);
