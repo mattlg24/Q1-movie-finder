@@ -1,3 +1,10 @@
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 h1 {
     text-align: center;
 }
@@ -10,4 +17,16 @@ h1 {
 }
 main p {
     text-align: center;
+}
+
+.btn {
+margin-bottom: 50px;
+}
+
+iframe {
+  bord
+}
+
+.media {
+margin: auto;
 }
