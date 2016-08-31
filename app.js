@@ -54,7 +54,7 @@ $(document).ready(function() {
                                       </div>
                                     </div>
                                     <div class="modal-footer">
-                                      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                                     </div>
                                   </div>
                                 </div>
@@ -66,9 +66,10 @@ $(document).ready(function() {
                               </div>
 
                               <div class="row">
-                                <div class="sites">
+                                <p>Where to watch</p>
+                                  <div class="sites">
 
-                                </div>
+                                  </div>
                               </div>`;
                             let divSites = ($(contentDiv).filter(":last-child").children())
                             console.log(divSites);
