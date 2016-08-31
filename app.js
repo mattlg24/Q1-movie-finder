@@ -38,12 +38,12 @@ $(document).ready(function() {
                             let releaseDate = newData.release_year
                             let movieLength = newData.duration / 60
                             let movieID = newData.id
-                            let appendSites = '#poster-' + movieID + ' .sites'
+                            let appendSites = "#movie-" + movieID + ' .sites'
                             console.log(appendSites);
 
                             let contentDiv =
-                                `<div id="${movieID}"
-                            <div class=row>
+                                `<div id="movie-${movieID}" class="row">
+                            <div class="row">
                               <div id="poster" class="col s12 m3 l3">
                                 <div class="card">
                                   <div class="card-image">
@@ -74,42 +74,42 @@ $(document).ready(function() {
 
                             <div class="row">
                               <p>Where to watch</p>
-                                <div class="sites">
+                                <div class="sites col l12">
 
                                 </div>
                             </div>
                           </div>`;
-                            let divSites = ($(contentDiv).filter(":last-child").children('.sites'))
-                                // console.log('divs:', divSites);
-                                // console.log($('.sites'));
-                                // loops thru all watch sources
+                            // append content to page
+                            $('.media').append(contentDiv)
+
+                            // let divSites = ($(contentDiv).filter(":last-child").children('.sites'))
+                            // console.log('divs:', divSites);
+                            // console.log($('.sites'));
+                            // loops thru all watch sources
                             for (var j = 0; j < purchaseSources.length; j++) {
                                 let link = purchaseSources[j].link
                                 let source = purchaseSources[j].source
-                                    // console.log('title:', newData.title);
-                                    // console.log(purchaseSources[i].link);
+
                                 if (source === 'itunes') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/apple-icon.jpg"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="images/apple-icon.jpg"></a>`)
                                 } else if (source === 'amazon_buy') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/amazon-icon.jpg"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="images/amazon-icon.jpg"></a>`)
                                 } else if (source === 'vudu') {
-                                    $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'google_play') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/google-play-icon.jpg"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="images/google-play-icon.jpg"></a>`)
                                 } else if (source === 'mgo') {
-                                    $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'cinemanow') {
-                                    $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'youtube_purchase') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/youtube-icon.jpg"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="images/youtube-icon.jpg"></a>`)
                                 } else if (source === 'sony') {
-                                    $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'verizon_on_demand') {
-                                    $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 }
                             }
-                            // append content to page
-                            $('.media').append(contentDiv)
 
                             $('.modal-trigger').leanModal();
                         },
