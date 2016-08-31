@@ -50,8 +50,8 @@ $(document).ready(function() {
                                       <img src="${moviePoster}">
                                   </div>
                                   <div class="card-action">
-                                      <a class="waves-effect waves-light btn modal-trigger" href="#movieID">Info</a>
-                                    <div id="movieID" class="modal modal-fixed-footer">
+                                      <a class="waves-effect waves-light btn modal-trigger" href="#${movieID}">Info</a>
+                                    <div id="${movieID}" class="modal modal-fixed-footer">
                                       <div class="modal-content">
                                         <h4>${movieTitle}</h4>
                                         <p>Rating: ${movieRating}<br>
