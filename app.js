@@ -33,18 +33,30 @@ $(document).ready(function() {
                                 // watch sources
                             let purchaseSources = (newData.purchase_web_sources);
                             let movieTitle = newData.title
+                            let movieRating = newData.rating
+                            let movieOverview = newData.overview
+                            let releaseDate = newData.release_year
+                            let movieLength = newData.duration / 60
+                            let movieID = newData.id
+                            let appendSites = '#poster-' + movieID + ' .sites'
+                            console.log(appendSites);
 
-                            let contentDiv = `<div id="poster" class="col s12 m3 l3">
+                            let contentDiv =
+                                `<div id="${movieID}"
+                            <div class=row>
+                              <div id="poster" class="col s12 m3 l3">
                                 <div class="card">
                                   <div class="card-image">
                                       <img src="${moviePoster}">
                                   </div>
                                   <div class="card-action">
-                                      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
-                                    <div id="modal1" class="modal modal-fixed-footer">
+                                      <a class="waves-effect waves-light btn modal-trigger" href="#movieID">Info</a>
+                                    <div id="movieID" class="modal modal-fixed-footer">
                                       <div class="modal-content">
                                         <h4>${movieTitle}</h4>
-                                        <p>A bunch of text</p>
+                                        <p>Rating: ${movieRating}<br>
+                                        Release Year: ${releaseDate}</p>
+                                        <p>${movieOverview}</p>
                                       </div>
                                     </div>
                                     <div class="modal-footer">
@@ -58,13 +70,15 @@ $(document).ready(function() {
                                 <iframe width="100%" height="362px" src="${trailer}">
                                 </iframe>
                               </div>
+                            </div
 
-                              <div class="row">
-                                <p>Where to watch</p>
-                                  <div class="sites">
+                            <div class="row">
+                              <p>Where to watch</p>
+                                <div class="sites">
 
-                                  </div>
-                              </div>`;
+                                </div>
+                            </div>
+                          </div>`;
                             let divSites = ($(contentDiv).filter(":last-child").children('.sites'))
                                 // console.log('divs:', divSites);
                                 // console.log($('.sites'));

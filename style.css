@@ -1,4 +1,4 @@
-h1 {
+    h1 {
     text-align: center;
     font-family: 'Baloo Chettan', cursive;
     font-size: 100px;
@@ -35,8 +35,8 @@ iframe {
     font-weight: bold;
 }
 
+/* label underline focus color */
 
-     /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #FFB544;
-     box-shadow: 0 1px 0 0 #FFB544;
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #FFB544;
+    box-shadow: 0 1px 0 0 #FFB544;
