@@ -32,13 +32,7 @@ $(document).ready(function() {
                             let trailer = newData.trailers.web[0].embed
                                 // watch sources
                             let purchaseSources = (newData.purchase_web_sources);
-                            // let source1 = purchaseSources[0]
-                            // let source2 = purchaseSources[1]
-                            // let source3 = purchaseSources[2]
-                            // let source4 = purchaseSources[3]
-                            // let source5 = purchaseSources[4]
-                            // console.log(purchaseSources);
-                            // console.log(source1.display_name);
+                            let movieTitle = newData.title
 
                             let contentDiv = `<div id="poster" class="col s12 m3 l3">
                                 <div class="card">
@@ -46,15 +40,15 @@ $(document).ready(function() {
                                       <img src="${moviePoster}">
                                   </div>
                                   <div class="card-action">
-                                      <a href="#modal1">Info</a>
-                                    <div id="${newData.id}" class="modal">
+                                      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Info</a>
+                                    <div id="modal1" class="modal modal-fixed-footer">
                                       <div class="modal-content">
-                                        <h4>${newData.title}</h4>
+                                        <h4>${movieTitle}</h4>
                                         <p>A bunch of text</p>
                                       </div>
                                     </div>
                                     <div class="modal-footer">
-                                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
                                     </div>
                                   </div>
                                 </div>
@@ -71,19 +65,19 @@ $(document).ready(function() {
 
                                   </div>
                               </div>`;
-                            let divSites = ($(contentDiv).filter(":last-child").children())
-                            console.log(divSites);
-                            console.log($('.sites'));
-                            // loops thru all watch sources
-                            for (var i = 0; i < purchaseSources.length; i++) {
-                                let link = purchaseSources[i].link
-                                let source = purchaseSources[i].source
+                            let divSites = ($(contentDiv).filter(":last-child").children('.sites'))
+                                // console.log('divs:', divSites);
+                                // console.log($('.sites'));
+                                // loops thru all watch sources
+                            for (var j = 0; j < purchaseSources.length; j++) {
+                                let link = purchaseSources[j].link
+                                let source = purchaseSources[j].source
                                     // console.log('title:', newData.title);
                                     // console.log(purchaseSources[i].link);
                                 if (source === 'itunes') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/apple-icon/jpg"></a>`)
+                                    $('.sites').append(`<a href="${link}"><img src="images/apple-icon.jpg"></a>`)
                                 } else if (source === 'amazon_buy') {
-                                    $('.sites').append(`<a href="${link}"><img src="images/amazon-icon/jpg"></a>`)
+                                    $('.sites').append(`<a href="${link}"><img src="images/amazon-icon.jpg"></a>`)
                                 } else if (source === 'vudu') {
                                     $('.sites').append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'google_play') {
