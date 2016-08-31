@@ -35,9 +35,8 @@
     .card .card-action {
         padding: 2px;
     }
-    #card-content {
-        /*font-size: 16px;
-        font-weight: bold;*/
+    .btn {
+      align-items: center;
     }
     .modal-content h4 {
       font-size: 30px;

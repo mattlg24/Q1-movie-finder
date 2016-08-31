@@ -1,14 +1,12 @@
 $(document).ready(function() {
-
-    console.log('locked and loaded');
-
-    // access guidebox api
     $('.btn').on('click', function(event) {
+
+
         $('.media').empty()
         if ($('#search').val() === '') {
             Materialize.toast("Please enter in a movie title", 3000)
         }
-
+        // access guidebox api
         var searchTerm = ($('#search').val())
         $.ajax({
             method: 'Get',
@@ -48,7 +46,7 @@ $(document).ready(function() {
                                   <div class="card-image">
                                       <img src="${moviePoster}">
                                   </div>
-                                  <div class="card-action infoBtn">
+                                  <div class="card-action infoBtn center">
                                       <a class="waves-effect waves-light btn modal-trigger" href="#${movieID}">Info</a>
                                     <div id="${movieID}" class="modal">
                                       <div class="modal-content">
@@ -83,12 +81,12 @@ $(document).ready(function() {
                             // append content to page
                             $('.media').append(contentDiv)
 
+                            // console.log("newData:", newData);
                             // loops thru all watch sources
-                            for (var j = 0; j < purchaseSources.length; j++) {
-                                let link = purchaseSources[j].link
-                                let source = purchaseSources[j].source
+                            for (var i = 0; i < purchaseSources.length; i++) {
+                                let link = purchaseSources[i].link
+                                let source = purchaseSources[i].source
                                     // console.log(movie.title);
-                                console.log(source);
 
                                 if (source === 'itunes') {
                                     $(appendSites).append(`<a href="${link}"><img src="images/apple-icon.jpg"></a>`)
@@ -98,6 +96,8 @@ $(document).ready(function() {
                                     $(appendSites).append(`<a href="${link}">VUDU</a>`)
                                 } else if (source === 'google_play') {
                                     $(appendSites).append(`<a href="${link}"><img src="images/google-play-icon.jpg"></a>`)
+                                } else if (source === 'disney_movies_anywhere') {
+                                    $(appendSites).append(`<a href="${link}"><img src="images/disney-icon.png"></a>`)
                                 } else if (source === 'mgo') {
                                     $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
                                 } else if (source === 'cinemanow') {
@@ -129,6 +129,6 @@ $(document).ready(function() {
     $("#toTop").click(function() {
         $('html, body').animate({
             scrollTop: $(".container").offset().top
-        }, 800);
+        }, 1000);
     });
 });
