@@ -39,7 +39,6 @@ $(document).ready(function() {
                             let movieLength = newData.duration / 60
                             let movieID = newData.id
                             let appendSites = "#movie-" + movieID + ' .sites'
-                            console.log(appendSites);
 
                             let contentDiv =
                                 `<div id="movie-${movieID}" class="row">
@@ -51,16 +50,16 @@ $(document).ready(function() {
                                   </div>
                                   <div class="card-action">
                                       <a class="waves-effect waves-light btn modal-trigger" href="#${movieID}">Info</a>
-                                    <div id="${movieID}" class="modal modal-fixed-footer">
+                                    <div id="${movieID}" class="modal">
                                       <div class="modal-content">
                                         <h4>${movieTitle}</h4>
                                         <p>Rating: ${movieRating}<br>
                                         Release Year: ${releaseDate}</p>
                                         <p>${movieOverview}</p>
                                       </div>
-                                    </div>
                                     <div class="modal-footer">
                                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -73,8 +72,8 @@ $(document).ready(function() {
                             </div
 
                             <div class="row">
-                              <p>Where to watch</p>
-                                <div class="sites col l12">
+                              <h4 class="center">Where to watch</h4>
+                                <div class="sites col l12 center">
 
                                 </div>
                             </div>
@@ -82,9 +81,6 @@ $(document).ready(function() {
                             // append content to page
                             $('.media').append(contentDiv)
 
-                            // let divSites = ($(contentDiv).filter(":last-child").children('.sites'))
-                            // console.log('divs:', divSites);
-                            // console.log($('.sites'));
                             // loops thru all watch sources
                             for (var j = 0; j < purchaseSources.length; j++) {
                                 let link = purchaseSources[j].link
@@ -95,7 +91,7 @@ $(document).ready(function() {
                                 } else if (source === 'amazon_buy') {
                                     $(appendSites).append(`<a href="${link}"><img src="images/amazon-icon.jpg"></a>`)
                                 } else if (source === 'vudu') {
-                                    $(appendSites).append(`<a href="${link}"><img src="http://www.fillmurray.com/50/50"></a>`)
+                                    $(appendSites).append(`<a href="${link}">VUDU</a>`)
                                 } else if (source === 'google_play') {
                                     $(appendSites).append(`<a href="${link}"><img src="images/google-play-icon.jpg"></a>`)
                                 } else if (source === 'mgo') {
