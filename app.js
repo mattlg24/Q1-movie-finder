@@ -78,7 +78,8 @@ $(document).ready(function() {
 
                                 </div>
                             </div>
-                          </div>`;
+                          </div>
+                          <hr>`;
                             // append content to page
                             $('.media').append(contentDiv)
 
@@ -86,6 +87,8 @@ $(document).ready(function() {
                             for (var j = 0; j < purchaseSources.length; j++) {
                                 let link = purchaseSources[j].link
                                 let source = purchaseSources[j].source
+                                    // console.log(movie.title);
+                                console.log(source);
 
                                 if (source === 'itunes') {
                                     $(appendSites).append(`<a href="${link}"><img src="images/apple-icon.jpg"></a>`)
