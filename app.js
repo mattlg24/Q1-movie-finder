@@ -47,7 +47,7 @@ $(document).ready(function() {
                                       <img src="${moviePoster}">
                                   </div>
                                   <div class="card-action infoBtn center">
-                                      <a class="waves-effect waves-light btn modal-trigger" href="#${movieID}">Info</a>
+                                      <a class="waves-effect waves-light btn modal-trigger blue" href="#${movieID}">Info</a>
                                     <div id="${movieID}" class="modal">
                                       <div class="modal-content">
                                         <h4>${movieTitle}</h4>
@@ -124,6 +124,12 @@ $(document).ready(function() {
             }
         })
     })
+    $('#search').keypress(function(event) {
+        if (event.which == 13) {
+            $('.btn').click()
+            console.log('hello');
+        }
+    })
 
     //scroll to top when button clicked
     $("#toTop").click(function() {
@@ -131,4 +137,4 @@ $(document).ready(function() {
             scrollTop: $(".container").offset().top
         }, 1000);
     });
-});
+});;
