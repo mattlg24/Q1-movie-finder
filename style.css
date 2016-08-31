@@ -18,8 +18,8 @@
         /*font-family: 'Architects Daughter', cursive;*/
         /*font-family: 'Boogaloo', cursive;*/
     }
-
     /* label underline focus color */
+
     .input-field input[type=text]:focus {
         border-bottom: 1px solid #FFB544;
         box-shadow: 0 1px 0 0 #FFB544;
@@ -31,7 +31,18 @@
         border: none;
     }
 
+    /*info button on movie poster card*/
+    .card .card-action {
+        padding: 2px;
+    }
     #card-content {
         /*font-size: 16px;
         font-weight: bold;*/
+    }
+    .modal-content h4 {
+      font-size: 30px;
+      text-align: center;
+    }
+    .modal-content p {
+      font-size: 20px;
     }

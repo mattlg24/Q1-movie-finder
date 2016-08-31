@@ -48,12 +48,13 @@ $(document).ready(function() {
                                   <div class="card-image">
                                       <img src="${moviePoster}">
                                   </div>
-                                  <div class="card-action">
+                                  <div class="card-action infoBtn">
                                       <a class="waves-effect waves-light btn modal-trigger" href="#${movieID}">Info</a>
                                     <div id="${movieID}" class="modal">
                                       <div class="modal-content">
                                         <h4>${movieTitle}</h4>
                                         <p>Rating: ${movieRating}<br>
+                                        Length: ${movieLength} min<br>
                                         Release Year: ${releaseDate}</p>
                                         <p>${movieOverview}</p>
                                       </div>
