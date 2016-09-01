@@ -3,6 +3,7 @@
         font-family: 'Baloo Chettan', cursive;
         font-size: 100px;
     }
+
     .background {
         background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
         background-size: cover;
@@ -18,8 +19,8 @@
         /*font-family: 'Architects Daughter', cursive;*/
         /*font-family: 'Boogaloo', cursive;*/
     }
-    /* label underline focus color */
 
+    /* label underline focus color */
     .input-field input[type=text]:focus {
         border-bottom: 1px solid #FFB544;
         box-shadow: 0 1px 0 0 #FFB544;
@@ -36,17 +37,59 @@
         padding: 2px;
     }
     .btn {
-      align-items: center;
+        align-items: center;
     }
     .modal-content h4 {
-      font-size: 25px;
-      text-align: center;
+        font-size: 25px;
+        text-align: center;
     }
     .modal-content p {
-      font-size: 15px;
+        font-size: 15px;
+    }
+    hr {
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
+    h4 {
+        font-family: 'Nunito', sans-serif;
     }
 
-    hr {
-      margin-top: 35px;
-      margin-bottom: 40px;
+    /* link icons */
+    img {
+      margin-left: 2%;
+    }
+
+    #sony {
+        height: 50px;
+        width: 50px;
+    }
+    #verizon {
+        height: 50px;
+        width: 50px;
+    }
+    #cinemaNow {
+        height: 50px;
+        width: 50px;
+    }
+    #vudu {
+        height: 50px;
+        width: 50px;
+    }
+    #fandango {
+        height: 50px;
+        width: 50px;
+    }
+
+    /*footer*/
+    footer h5 {
+      font-size: 30px;
+      font-family: 'Baloo Chettan', cursive;
+    }
+    .grey-text.text-lighten-4 {
+      margin-top: -5px;
+    }
+
+    footer p {
+      font-size: 18px;
+      font-family: 'Nunito', sans-serif;
     }
