@@ -79,6 +79,10 @@ $(document).ready(function() {
 
                                 console.log(newData.title);
                                 console.log(purchaseSources);
+
+                                if (purchaseSources.length === 0) {
+                                    $(appendSites).append('Sorry, this movie is not available.')
+                                }
                                 // loops thru all watch sources
                                 for (var i = 0; i < purchaseSources.length; i++) {
                                     let link = purchaseSources[i].link
@@ -106,9 +110,6 @@ $(document).ready(function() {
                                         $(appendSites).append(`<a href="${link}"><img src="images/sony-icon.png"></a>`)
                                     } else if (source === 'verizon_on_demand') {
                                         $(appendSites).append(`<a href="${link}"><img src="images/verizon-icon.png"></a>`)
-                                    } else {
-                                        console.log("i'm here!!!!!");
-                                        $(appendSites).append('Sorry, this movie is not available.')
                                     }
                                 }
 
