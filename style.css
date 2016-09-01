@@ -1,10 +1,5 @@
-    h1 {
-        text-align: center;
-        font-family: 'Baloo Chettan', cursive;
-        font-size: 100px;
-    }
-
-    .background {
+/*hide on small only*/
+    .background.hide-on-small-only {
         background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
         background-position: center center;
         background-repeat: no-repeat;
@@ -13,10 +8,33 @@
         height: 450px;
     }
 
+    /*hide on med and up*/
+    .background.hide-on-med-and-up {
+        background-image: url('https://pixabay.com/static/uploads/photo/2016/03/07/00/00/cinema-1241422_1280.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Baloo Chettan', cursive;
+      /*font-size: 100px;*/
+      /*color: #FFB544;*/
+      font-size: 8.5vh;
+      font-size: 8.5vw;
+    }
+
     main p {
         text-align: center;
-        font-size: 30px;
+        /*font-size: 30px;*/
         font-family: 'Nunito', sans-serif;
+        /*color: #FFB544;*/
+        font-size: 4vh;
+        font-size: 3.5vw;
+
     }
 
     /* label underline focus color */
@@ -27,6 +45,8 @@
     .searchBtn {
         margin-bottom: 50px;
     }
+
+
     iframe {
         border: none;
         width: 100%;

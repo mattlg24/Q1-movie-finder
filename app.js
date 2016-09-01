@@ -1,10 +1,8 @@
 $(document).ready(function() {
-    $('.btn').on('click', function(event) {
-
-
+    $('.btn').on('click', function() {
             $('.media').empty()
             if ($('#search').val() === '') {
-                Materialize.toast("Please enter in a movie title", 3000)
+                Materialize.toast('Please enter in a movie title', 3000)
             }
             // access guidebox api
             var searchTerm = ($('#search').val())
@@ -13,27 +11,26 @@ $(document).ready(function() {
                 url: `https://api-public.guidebox.com/v1.43/US/rKdlIiwGSvS2KHovOWT8IdWJseMGPYiH/search/movie/title/${searchTerm}/fuzzy`,
                 dataType: 'json',
                 success: function(data) {
-                    movies = []
                     let allMovies = data.results
                         // loop thru all movies and grab id
                     for (var i = 0; i < allMovies.length; i++) {
                         let movieList = allMovies[i]
-                        let movieIds = (movieList.id);
+                        let movieIds = (movieList.id)
                         $.ajax({
-                            method: "GET",
+                            method: 'GET',
                             url: `https://api-public.guidebox.com/v1.43/US/rKdlIiwGSvS2KHovOWT8IdWJseMGPYiH/movie/${movieIds}`,
                             dataType: 'json',
                             success: function(newData) {
                                 let moviePoster = newData.poster_240x342
                                 let trailer = newData.trailers.web[0].embed
-                                let purchaseSources = (newData.purchase_web_sources);
+                                let purchaseSources = (newData.purchase_web_sources)
                                 let movieTitle = newData.title
                                 let movieRating = newData.rating
                                 let movieOverview = newData.overview
                                 let releaseDate = newData.release_year
                                 let movieLength = newData.duration / 60
                                 let movieID = newData.id
-                                let appendSites = "#movie-" + movieID + ' .sites'
+                                let appendSites = '#movie-' + movieID + ' .sites'
 
                                 let contentDiv =
                                     `<div id="movie-${movieID}" class="row">
@@ -73,8 +70,8 @@ $(document).ready(function() {
                                 </div>
                             </div>
                           </div>
-                          <hr>`;
-                                // append content to page
+                          <hr>`
+                                    // append content to page
                                 $('.media').append(contentDiv)
 
                                 if (purchaseSources.length === 0) {
@@ -110,16 +107,16 @@ $(document).ready(function() {
                                     }
                                 }
 
-                                $('.modal-trigger').leanModal();
+                                $('.modal-trigger').leanModal()
                             },
                             error: function(err) {
-                                console.log('newData ERROR msg:', err);
+                                console.log('newData ERROR msg:', err)
                             }
                         })
                     }
                 },
                 error: function(err) {
-                    console.log('ERROR msg:', err);
+                    console.log('ERROR msg:', err)
                 }
             })
         })
@@ -134,6 +131,6 @@ $(document).ready(function() {
     $("#toTop").click(function() {
         $('html, body').animate({
             scrollTop: $(".container").offset().top
-        }, 1000);
-    });
-});;;
+        }, 1000)
+    })
+})
