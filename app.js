@@ -37,12 +37,12 @@ $(document).ready(function() {
 
                                 let contentDiv =
                                     `<div id="movie-${movieID}" class="row">
-                              <div class="row col s11 push-s1">
-                                <div id="poster" class="col s10 m3 l3">
-                                  <div class="card">
-                                    <div class="card-image">
+                            <div class="row">
+                              <div id="poster" class="col s12 m3 l3">
+                                <div class="card">
+                                  <div class="card-image">
                                       <img src="${moviePoster}">
-                                    </div>
+                                  </div>
                                   <div class="card-action infoBtn center">
                                       <a class="waves-effect waves-light btn modal-trigger blue" href="#${movieID}">Info</a>
                                     <div id="${movieID}" class="modal">
@@ -53,8 +53,8 @@ $(document).ready(function() {
                                         Release Year: ${releaseDate}</p>
                                         <p>${movieOverview}</p>
                                       </div>
-                                      <div class="modal-footer">
-                                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
+                                    <div class="modal-footer">
+                                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">X</a>
                                       </div>
                                     </div>
                                   </div>
