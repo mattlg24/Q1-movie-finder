@@ -89,24 +89,26 @@ $(document).ready(function() {
                                     } else if (source === 'amazon_buy') {
                                         $(appendSites).append(`<a href="${link}"><img src="images/amazon-icon.jpg"></a>`)
                                     } else if (source === 'vudu') {
-                                        $(appendSites).append(`<a href="${link}"><img id="vudu" src="images/vudu-icon.png"></a>`)
+                                        $(appendSites).append(`<a href="${link}"><img src="images/vudu-icon.png"></a>`)
                                     } else if (source === 'google_play') {
                                         $(appendSites).append(`<a href="${link}"><img src="images/google-play-icon.jpg"></a>`)
                                     } else if (source === 'disney_movies_anywhere') {
                                         $(appendSites).append(`<a href="${link}"><img src="images/disney-icon.png"></a>`)
                                     } else if (source === 'mgo') {
-                                        $(appendSites).append(`<a href="${link}"><img id="fandango" src="images/fandango-icon.jpeg"></a>`)
+                                        $(appendSites).append(`<a href="${link}"><img src="images/fandango-icon.jpeg"></a>`)
                                     } else if (source === 'cinemanow') {
-                                        $(appendSites).append(`<a href="${link}"><img id="cinemaNow" src="images/cinemanow-icon.jpeg"></a>`)
+                                        $(appendSites).append(`<a href="${link}"><img src="images/cinemanow-icon.jpeg"></a>`)
+                                    } else if (source === 'xbox') {
+                                        $(appendSites).append(`<a href="${link}"><img src="images/xbox-icon.jpg"></a>`)
                                     } else if (source === 'youtube_purchase') {
                                         $(appendSites).append(`<a href="${link}"><img src="images/youtube-icon.jpg"></a>`)
                                     } else if (source === 'sony') {
-                                        $(appendSites).append(`<a href="${link}"><img id="sony" src="images/sony-icon.png"></a>`)
+                                        $(appendSites).append(`<a href="${link}"><img src="images/sony-icon.png"></a>`)
                                     } else if (source === 'verizon_on_demand') {
-                                        $(appendSites).append(`<a href="${link}"><img id="verizon" src="images/verizon-icon.png"></a>`)
+                                        $(appendSites).append(`<a href="${link}"><img src="images/verizon-icon.png"></a>`)
                                     } else {
-                                        console.log("i'm here");
-                                        $(appendSites).append('Sorry, this movie is not available online.')
+                                        console.log("i'm here!!!!!");
+                                        $(appendSites).append('Sorry, this movie is not available.')
                                     }
                                 }
 

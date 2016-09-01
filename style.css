@@ -58,27 +58,8 @@
     /* link icons */
     .sites img {
       margin-left: 2%;
-    }
-
-    #sony {
-        height: 50px;
-        width: 50px;
-    }
-    #verizon {
-        height: 50px;
-        width: 50px;
-    }
-    #cinemaNow {
-        height: 50px;
-        width: 50px;
-    }
-    #vudu {
-        height: 50px;
-        width: 50px;
-    }
-    #fandango {
-        height: 50px;
-        width: 50px;
+      height: 50px;
+      width: 50px;
     }
 
     /*footer*/
