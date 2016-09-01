@@ -6,18 +6,17 @@
 
     .background {
         background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
-        background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
+        background-size: cover;
         width: 100%;
         height: 450px;
     }
+
     main p {
         text-align: center;
         font-size: 30px;
         font-family: 'Nunito', sans-serif;
-        /*font-family: 'Gloria Hallelujah', cursive;*/
-        /*font-family: 'Architects Daughter', cursive;*/
-        /*font-family: 'Boogaloo', cursive;*/
     }
 
     /* label underline focus color */
@@ -30,6 +29,8 @@
     }
     iframe {
         border: none;
+        width: 100%;
+        height: 362px;
     }
 
     /*info button on movie poster card*/

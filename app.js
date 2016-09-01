@@ -62,8 +62,7 @@ $(document).ready(function() {
                               </div>
 
                               <div class="trailer col hide-on-small-only m9 l9">
-                                <iframe width="100%" height="362px" src="${trailer}">
-                                </iframe>
+                                <iframe src="${trailer}"></iframe>
                               </div>
                             </div
 
