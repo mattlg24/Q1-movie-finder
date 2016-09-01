@@ -29,8 +29,8 @@
 
     main p {
         text-align: center;
-        /*font-size: 30px;*/
         font-family: 'Nunito', sans-serif;
+        /*font-size: 30px;*/
         /*color: #FFB544;*/
         font-size: 4vh;
         font-size: 3.5vw;
@@ -86,6 +86,7 @@
       margin-top: 0px;
       margin-bottom: 0px;
       font-size: 20px;
+      color: red;
     }
 
     /*footer*/
