@@ -62,6 +62,12 @@
       width: 50px;
     }
 
+    #sorryMsg {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 20px;
+    }
+
     /*footer*/
     footer h5 {
       font-size: 30px;

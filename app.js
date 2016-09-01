@@ -77,11 +77,8 @@ $(document).ready(function() {
                                 // append content to page
                                 $('.media').append(contentDiv)
 
-                                console.log(newData.title);
-                                console.log(purchaseSources);
-
                                 if (purchaseSources.length === 0) {
-                                    $(appendSites).append('Sorry, this movie is not available.')
+                                    $(appendSites).append(`<p id="sorryMsg">Sorry, this movie is not available to watch.</p>`)
                                 }
                                 // loops thru all watch sources
                                 for (var i = 0; i < purchaseSources.length; i++) {
