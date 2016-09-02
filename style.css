@@ -1,6 +1,6 @@
 /*hide on small only*/
     .background.hide-on-small-only {
-        background-image: url('https://hd.unsplash.com/photo-1452745872182-022042dead8f');
+        background-image: url('images/movieSet.jpeg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -10,7 +10,7 @@
 
     /*hide on med and up*/
     .background.hide-on-med-and-up {
-        background-image: url('https://pixabay.com/static/uploads/photo/2016/03/07/00/00/cinema-1241422_1280.jpg');
+        background-image: url('images/movieTheater.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -31,7 +31,7 @@
         text-align: center;
         font-family: 'Nunito', sans-serif;
         /*font-size: 30px;*/
-        /*color: #FFB544;*/
+        color: #FFB544;
         font-size: 4vh;
         font-size: 3.5vw;
 
